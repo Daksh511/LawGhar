@@ -87,7 +87,7 @@ if prompt := st.chat_input('Your message here...'):
     with st.chat_message('user'):
         st.markdown(prompt)
         old_prompt=prompt
-        check = "Check if the given question is related to laws applying in india. Give answer if related to laws in india else tell user to ask law related questions and this question is not related to laws."
+        check = "Check if the given question is related to laws applying in india. Give answer if related to laws in india else tell user to ask law related questions and this question is not related to laws and do not give any answer further."
         limit = " Give in less than 200 words."
         prompt = prompt + check + limit
         # question = "Two families have been feuding over a piece of land for generations. They both have historical documents and personal narratives to support their claims. The case raises questions about land ownership rights, inheritance laws, and the value of tradition versus legal documentation."
