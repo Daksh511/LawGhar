@@ -86,6 +86,7 @@ if prompt := st.chat_input('Your message here...'):
     # Display user message in chat message container
     with st.chat_message('user'):
         st.markdown(prompt)
+        old_prompt=prompt
         check = "Check if the given question is related to laws applying in india. Give answer if related to laws in india else tell user to ask law related questions and this question is not related to laws."
         limit = " Give in less than 200 words."
         prompt = prompt + check + limit
@@ -96,7 +97,7 @@ if prompt := st.chat_input('Your message here...'):
     st.session_state.messages.append(
         dict(
             role='user',
-            content=prompt,
+            content=old_prompt,
         )
     )
     ## Send message to AI
