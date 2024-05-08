@@ -88,7 +88,8 @@ if prompt := st.chat_input('Your message here...'):
         st.markdown(prompt)
         old_prompt=prompt
         check = "Check if the given question is related to laws applying in india. Give answer if related to laws in india else tell user to ask law related questions and this question is not related to laws and do not give any answer further."
-        limit = " Give in less than 200 words."
+        acc = "Do not indulge in personal affairs or any personal opinion. Also include the legal steps that can be taken for the particular question or scenario if required."
+        limit = " Be accurate with answer and concise your answer within 200 words."
         prompt = prompt + check + limit
         # question = "Two families have been feuding over a piece of land for generations. They both have historical documents and personal narratives to support their claims. The case raises questions about land ownership rights, inheritance laws, and the value of tradition versus legal documentation."
         # response = model.generate_content(question+check+limit)
